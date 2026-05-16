@@ -1,103 +1,149 @@
-:root {
-    --bg: #f3f5fb;
+--bg: #f4f7ff;
     --card: #ffffff;
-    --text: #0f172a;
-    --muted: #64748b;
-    --line: #e2e8f0;
-    --brand: #1d4ed8;
-    --brand-strong: #1e40af;
+    --text: #101828;
+    --muted: #667085;
+    --line: #e4e7ec;
+    --brand: #1459e6;
+    --brand-strong: #0f46b8;
+    --ok: #027a48;
   }
-  * { box-sizing: border-box; }
-  body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: radial-gradient(1200px 500px at 50% -10%, #dbeafe 0%, var(--bg) 50%);
+    font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(1000px 420px at 50% -10%, #d7e7ff 0%, var(--bg) 50%);
     color: var(--text);
-    line-height: 1.55;
+    line-height: 1.6;
   }
   .wrap {
-    max-width: 920px;
-    margin: 28px auto;
-    padding: 0 16px 32px;
-  }
-  .back {
-    display: inline-block;
-    margin-bottom: 12px;
-    text-decoration: none;
-    color: var(--brand);
-    font-weight: 600;
+    max-width: 980px;
+    margin: 32px auto;
+    padding: 0 18px 40px;
   }
   .card {
     background: var(--card);
     border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 26px;
-    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 18px 48px rgba(16, 24, 40, 0.08);
   }
-  h1 {
-    margin: 0 0 2px;
-    font-size: clamp(30px, 4vw, 40px);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
   }
-  h2 {
-    margin: 22px 0 8px;
-    font-size: 20px;
-    line-height: 1.2;
-  }
-  p { margin: 0 0 10px; }
-  ul {
-    margin: 0;
-    padding-left: 18px;
-    color: var(--text);
-  }
-  li { margin-bottom: 6px; }
-  .meta {
-    color: var(--muted);
-    margin-bottom: 14px;
-    font-size: 14px;
-  }
-  .support-box {
-    margin-top: 10px;
-    padding: 14px;
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--muted);
+    background: #fff;
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--ok);
+  }
+    margin: 0 0 2px;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.1;
+  h2 {
+    margin: 24px 0 10px;
+    font-size: 21px;
+    line-height: 1.2;
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
     background: linear-gradient(180deg, #ffffff, #f8fafc);
   }
-  .support-box p {
-    margin: 0 0 8px;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
   }
-  .cta {
+  .support-box p {
     display: inline-block;
-    margin-top: 8px;
-    padding: 11px 14px;
-    border-radius: 10px;
+    margin-top: 10px;
+    padding: 12px 16px;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: 700;
-    color: #fff;
-    background: linear-gradient(180deg, var(--brand), var(--brand-strong));
-    box-shadow: 0 8px 18px rgba(29, 78, 216, 0.28);
+  }
+  .faq {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 14px 8px;
+    background: #fff;
+  }
+  .faq h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
   }
   .muted {
-    color: var(--muted);
+  }
+  .links {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .link-btn {
+    text-decoration: none;
+    color: var(--brand);
+    font-weight: 600;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 9px 12px;
+    background: #fff;
+  }
+  @media (max-width: 780px) {
+    .card { padding: 20px; border-radius: 16px; }
+    .grid { grid-template-columns: 1fr; }
+    h1 { font-size: 34px; }
   }
 </style>
 <main class="wrap">
-  <a class="back" href="./index.html">← Documenti legali</a>
   <article class="card">
+    <div class="top">
+      <a class="link-btn" href="./index.html">← Documenti legali</a>
+      <span class="badge"><span class="status-dot"></span>Supporto attivo</span>
+    </div>
+    <h1>Supporto PreventivoRapido</h1>
 
-    <p>Per assistenza su PreventivoRapido (problemi tecnici, acquisti, ripristino abbonamento, bug o richieste), contattaci ai riferimenti qui sotto.</p>
+    <p>Assistenza per problemi tecnici, abbonamenti, ripristino acquisti e segnalazioni. Ti rispondiamo via email in modo rapido e chiaro.</p>
 
-    <h2>Contatti supporto</h2>
-    <div class="support-box">
-      <p><strong>Email:</strong> fernandopiras95@gmail.com</p>
     <h2>Informazioni utili da includere</h2>
-    <ul>
-      <li>Modello dispositivo e versione iOS/iPadOS</li>
-      <li>Versione app PreventivoRapido</li>
-      <li>Descrizione del problema e passaggi per riprodurlo</li>
-      <li>Screenshot (se disponibili)</li>
-    </ul>
+    <div class="grid">
+      <div class="faq">
+        <h3>Dati dispositivo</h3>
+        <p>Modello iPhone/iPad e versione iOS/iPadOS.</p>
+      </div>
+      <div class="faq">
+        <h3>Versione app</h3>
+        <p>Numero versione di PreventivoRapido installata.</p>
+      </div>
+      <div class="faq">
+        <h3>Descrizione problema</h3>
+        <p>Cosa succede e passaggi per riprodurre il comportamento.</p>
+      </div>
+      <div class="faq">
+        <h3>Allegati utili</h3>
+        <p>Screenshot o video brevi che mostrano il problema.</p>
+      </div>
+    </div>
 
-    <h2>Abbonamenti</h2>
     <p class="muted">Gli abbonamenti sono gestiti da Apple. Per modificare o annullare un piano, usa la gestione abbonamenti del tuo Apple ID.</p>
+
+    <div class="links">
+      <a class="link-btn" href="./privacy.html">Privacy Policy</a>
+      <a class="link-btn" href="./termini.html">Termini di utilizzo</a>
+    </div>
